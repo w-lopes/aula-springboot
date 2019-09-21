@@ -1,0 +1,22 @@
+<th:block th:include="header"></th:block>
+<table class="table striped highlight container">
+    <thead>
+        <tr>
+            <th>Evento</th>
+            <th>Local</th>
+            <th>Data</th>
+            <th>Horário</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="evento: ${eventos}">
+            <td><a th:href="${(#mvc.url('EC#detalhesEvento').arg(0, evento.codigo)).build()}" th:text="${evento.nome}"></a></td>
+            <td th:text="${evento.local}"></td>
+            <td th:text="${evento.data}"></td>
+            <td th:text="${evento.horario}"></td>
+            <td><a onclick="return window.confirm('Deletar evento?')" th:href="${(#mvc.url('EC#deletaEvento').arg(0, evento.codigo)).build()}"><i class="material-icons left">delete</i></a></td>
+        </tr>
+    </tbody>
+</table>
+<th:block th:include="footer"></th:block>

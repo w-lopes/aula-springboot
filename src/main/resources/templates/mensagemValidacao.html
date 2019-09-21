@@ -1,0 +1,8 @@
+<div th:if="${not #strings.isEmpty(mensagem)}">
+    <span style="display: none" class="toast-message" th:text="${mensagem}"></span>
+    <script type="text/javascript">
+        window.addEventListener("load", function(){
+            M.toast({html: $(".toast-message").eq(0).html(), classes: 'rounded'});
+        })
+    </script>
+</div>

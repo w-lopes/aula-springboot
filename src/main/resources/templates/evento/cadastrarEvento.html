@@ -1,0 +1,31 @@
+<th:block th:include="header"></th:block>
+
+<form class="container" method="POST">
+    <div class="row">
+        <div class="input-field col s12">
+            <label>Nome</label>
+            <input type="text" name="nome" value="" />
+        </div>
+        <div class="input-field col s12">
+            <label>Local</label>
+            <input type="text" name="local" value="" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+            <label>Data</label>
+            <input type="date" name="data" value="" />
+        </div>
+        <div class="input-field col s6">
+            <label>Horário</label>
+            <input type="time" name="horario" value="" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+            <button class="waves-effect waves-light btn" type="submit">Salvar</button>
+        </div>
+    </div>
+</form>
+
+<th:block th:include="footer"></th:block>
